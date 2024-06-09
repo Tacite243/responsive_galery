@@ -4,7 +4,7 @@
     margin: 0;
 }
 
-body, html {
+body {
     margin: 0;
     padding: 0;
     width: 98.8vw;
@@ -13,47 +13,48 @@ body, html {
 
 body {
     font-family: Arial, sans-serif;
-    display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
+    width: 100%;
     background-color: #f0f0f0;
 }
 
 .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    width: 100%;
-    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .photo {
     position: relative;
-    flex: 1 1 auto;
-    min-width: 200px;
-    min-height: 200px;
+    height: auto;
+    overflow: hidden;
+}
+
+.photo:hover {
+    filter: brightness(20%);
 }
 
 .photo img {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     object-fit: cover;
+    min-width: 100px;
+    min-height: 100vh;
 }
 
-.overlay {
+.photo .description {
+    color: #f0f0f0;
     position: absolute;
     bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.7);
     color: white;
-    opacity: 0;
-    transition: opacity 0.5s;
-    padding: 10px;
-    text-align: center;
+    width: 100%;
+    text-align: left;
+    padding: 30px;
+    box-sizing: border-box;
+    transition: opacity 0.3s ease;
 }
 
-.photo:hover .overlay {
+.photo:hover .description {
     opacity: 1;
 }
