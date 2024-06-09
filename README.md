@@ -25,3 +25,11 @@ Responsive Gallery is a project for a responsive image gallery. This project use
 
    ```bash
    git clone https://github.com/Tacite243/responsive_galery.git
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+## Authors
+
+Tacite243
